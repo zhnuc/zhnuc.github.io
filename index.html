@@ -24,17 +24,14 @@
         h1 {
             color: #333;
             cursor: pointer;
-        }
-
-        h1:hover {
-            text-decoration: underline;
+        
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1 onclick="cozeWebSDK.showChatBot()">欢迎使用 问象助手!</h1>
+        <h1 id="welcomeText">欢迎使用 问象助手!</h1>
     </div>
 
     <!-- 引入 Coze WebChat SDK -->
@@ -78,6 +75,13 @@
 
             }
         });
+
+        document.getElementById('welcomeText').addEventListener('click', function() {
+            cozeWebSDK.showChatBot();
+        });
+
+
+        
     </script>
 
 </body>
