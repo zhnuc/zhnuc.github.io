@@ -23,13 +23,18 @@
 
         h1 {
             color: #333;
+            cursor: pointer;
+        }
+
+        h1:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-         <h1><a href="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.2/libs/cn/index.js" target="_blank">欢迎使用 问象助手!</a></h1>
+        <h1 onclick="cozeWebSDK.showChatBot()">欢迎使用 问象助手!</h1>
     </div>
 
     <!-- 引入 Coze WebChat SDK -->
@@ -56,6 +61,9 @@
                     icon:"https://github.com/zhnuc/zhnuc.github.io/raw/main/daxiang.jpg?raw=true",
                     layout:"mobile",
 
+                },
+                asstBtn: {
+                    isNeed: false,
                 },
                 footer:{
                     isShow:true,
