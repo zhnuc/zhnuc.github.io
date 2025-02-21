@@ -31,7 +31,11 @@
 <body>
 
     <div class="container">
-        <h1 id="welcomeText">欢迎使用 问象助手!</h1>
+        <h1 onClick={() => {
+        cozeWebSDK.showChatBot();  // 显示聊天框
+    }} style="cursor: pointer;">
+        欢迎使用 问象助手!
+    </h1>
     </div>
 
     <!-- 引入 Coze WebChat SDK -->
@@ -76,9 +80,7 @@
             }
         });
 
-        document.getElementById('welcomeText').addEventListener('click', function() {
-            cozeWebSDK.showChatBot();
-        });
+
 
 
         
